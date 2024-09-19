@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: organic-ghee-service
+  namespace: test-ns
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ghee-app-services
+  template:
+    metadata:
+      labels:
+        app: ghee-app-services
+    spec:
+      containers:
+        - name: organic-ghee-container
+          image: anusocial123/organic-ghee-service:latest
+          ports:
+            - containerPort: 5626
