@@ -33,6 +33,6 @@ mongoose.connect("mongodb://127.0.0.1/restorent", () => {
   console.log("Server connected..");
 });
 
-app.listen(3000, '0.0.0.0', () => {  // Change from '127.0.0.1' to '0.0.0.0'
-  console.log('Server is running on port 3000');
+app.listen(3000, '0.0.0.0', () => {
+  console.log('Server running on port 3000');
 });
